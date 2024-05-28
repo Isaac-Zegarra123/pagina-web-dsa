@@ -1,0 +1,445 @@
+:root {
+  --main-color-red: #ab2a2a;
+  --main-color-blue: #082f47;
+  --main-bg-color: #e9e9e9;
+  --main-bg-color-75: #e8e8e8d6;
+  --main-color-red-50: #ab2a2a80;
+  --main-color-blue-50: #082f4780;
+  --main-color-red-75: #ab2a2ac4;
+  --main-color-blue-75: #082f47c4;
+  --width-desktop: 1200px;
+  --width-tablet: 900px;
+  --width-phone: 600px;
+}
+
+body {
+    max-width: 100%;
+    overflow-x: hidden; /* Para ocultar la barra de desplazamiento horizontal */
+    margin: 0 auto; /* Para centrar el contenido */
+  }
+  .title-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 10px 130px;
+  }
+  .logo-container {
+      margin-right: 20px;
+  }
+  .logo {
+      width: 80px;
+      height: auto;
+  }
+  .title {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #f3efef;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px 4px rgba(238, 21, 21, 0.3);
+      background-color: rgba(91, 87, 124, 0.521);
+      border-radius: 10px;
+  }
+  .btn {
+    margin: 30px;
+    margin-top: 0px;
+  }
+  @media (max-width: 768px) {
+  .logo-container {
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+  .title {
+      font-size: 28px;
+      text-align: center;
+  }
+  }
+  /* Estilos para el navegador */
+  .container-fluid {
+    background-color: rgba(91, 87, 124, 0.521);
+    border-radius: 20px;
+  }
+  .nav-link:hover,
+  .nav-link:focus {
+    background-color: rgba(109, 101, 189, 0.692);
+      border-radius: 30px;
+  }
+  .nav-link i {
+      margin-right: 20px;
+  }
+  /* Estilos para la sección de video */
+  .video {
+      width: 100%;
+      height: 710px;
+      background: linear-gradient(to right, hsla(244, 79%, 15%, 0.726), hsla(0, 83%, 18%, 0.842));
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+  }
+  #wave {
+      width: 100%;
+      bottom: 0;
+      position: -webkit-sticky;
+      position: absolute;
+      overflow: hidden;
+  }
+  .video video {
+      width: 100%;
+      height: 635px;
+      object-fit: cover;
+      object-position: center;
+  }
+  .text-video {
+      display: flex;
+      height: 640px;
+      align-items: center;
+      flex-direction: column;
+  }
+  .text-video .title-container {
+      font-size: 40px;
+      font-weight: 400;
+      position: absolute;
+      top: 15px;
+  }
+  .text-video nav {
+      font-size: 25px;
+      font-weight: 100;
+      position: absolute;
+      top: 180px;
+  }
+/*header*/
+.sub-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+}
+.sub {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #0a0a0a;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(238, 21, 21, 0.3);
+}
+@media (max-width: 768px) {
+.sub {
+    font-size: 28px;
+    text-align: center;
+}
+}
+/*acerca de*/
+.item {
+  opacity: 0; /* Inicialmente ocultos */
+}
+
+.item:nth-child(1) {
+  animation: fadeInUp 1s ease-out forwards; /* Animación de entrada desde abajo */
+}
+
+.item:nth-child(2) {
+  animation: fadeInDown 1s ease-out 0.5s forwards; /* Animación de entrada desde arriba con retraso */
+}
+
+.item:nth-child(3) {
+  animation: fadeInLeft 1s ease-out 1s forwards; /* Animación de entrada desde la izquierda con retraso */
+}
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #082f47;
+}
+
+.item {
+    flex: 1 1 300px; /* Establece un ancho mínimo de 300px para los elementos */
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Añade un margen inferior para separar los elementos en pantallas pequeñas */
+}
+
+.item:last-child {
+    margin-right: 0;
+}
+
+.img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+/*carrusel*/
+.organigrama * {
+  background-color: #e8e8e8d6;
+  justify-content: center;
+  
+}
+
+.organigrama ul {
+  padding-top: 60px;
+  list-style: none;
+  display: flex;
+  margin: 0%;
+}
+
+.organigrama li {
+  float: left;
+  text-align: center;
+  padding: 60px 15px 30px 10px;
+  position: relative;
+}
+.fila {
+  left: 4%;
+}
+
+.organigrama li::before,
+.organigrama li::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 50%;
+  border-top: 1px solid #000;
+  width: 50%;
+  height: 60px;
+}
+
+.organigrama li::after {
+  right: auto;
+  left: 50%;
+  border-left: 1px solid #000;
+}
+
+.organigrama li:only-child::before,
+.organigrama li:only-child::after {
+  display: none;
+}
+
+.organigrama li:only-child {
+  padding-top: 0;
+}
+
+.organigrama li:first-child::before,
+.organigrama li:last-child::after {
+  border: none;
+}
+
+.organigrama li:last-child::before {
+  border-right: 1px solid #000;
+  border-radius: 0 5px 0 0;
+}
+
+.organigrama li:first-child::after {
+  border-radius: 5px 0 0 0;
+}
+
+.organigrama li a {
+  border: 1px solid #000;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  color: #333;
+  font-family: Arial, sans-serif;
+  font-size: 0.9em;
+  display: inline-block;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  background-color: rgba(249, 249, 250, 0.87);
+}
+
+.organigrama li a:hover {
+  background-color: #ddd;
+}
+
+.organigrama > ul > li > a {
+  font-size: 1.1em;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.linea-h {
+  display: inline-block;
+  height: 1px;
+  background-color: #000;
+  width: 80px;
+  vertical-align: middle;
+  
+}
+
+.linea-v {
+  position: absolute;
+  top: 16%;
+  left: 50%;
+  height: 210px;
+  width: 1px;
+  background-color: #000;
+}
+
+@media (max-width: 768px) {
+  .organigrama li {
+    float: none;
+    padding: 10px 0;
+  }
+
+  .organigrama ul ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .organigrama ul ul li {
+    padding: 10px;
+  }
+
+  .organigrama li::before,
+  .organigrama li::after,
+  .organigrama ul ul::before,
+  .linea-h,
+  .linea-v {
+    display: none;
+  }
+}
+
+/*** Gallery Start ***/
+.container-gallery {
+  flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+  align-items: center;
+  padding: 20px;
+  background-color: #0646f7;
+}
+.gallery .gallery-img {
+  position: relative;
+  overflow: hidden;
+  /*height: 220px;
+  width: 100%;*/
+}
+
+.gallery .gallery-img .hover-style {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 1s;
+}
+
+.gallery .gallery-img:hover .hover-style {
+  width: auto;
+  height: auto;
+  border: 600px solid rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+
+.gallery .gallery-img embed {
+  transition: 0.5s;
+  /*height: 220px;
+  width: 100%;*/
+}
+
+.gallery .gallery-img:hover embed {
+  transform: scale(1.3);
+}
+
+.gallery .gallery-item .gallery-overlay {
+  transition: 0.5s;
+}
+
+.gallery .gallery-item:hover .gallery-overlay {
+  background: transparent !important;
+  border: 0 !important;
+}
+
+.gallery .gallery-img .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 2;
+}
+
+.gallery .gallery-img:hover .search-icon {
+  opacity: 1;
+}
+/* Media queries para dispositivos móviles */
+.gallery .gallery-img embed {
+  transition: 0.5s;
+  width: 100%; /* Ajusta el ancho al 100% del contenedor */
+  height: auto; /* Permite que la altura se ajuste automáticamente */
+}
+
+.gallery .gallery-img:hover embed {
+  transform: scale(1.1); /* Ajusta la escala al hacer hover */
+}
+@media (max-width: 768px) {
+  .pdf-container embed {
+      zoom: 2.5; /* Ajusta el nivel de zoom para dispositivos más pequeños */
+  }
+}
+
+/*** Gallery End ***/
+
+
+
+  /* Footer */
+.footer {
+  padding: 1px 0;
+  background-color:#ab2a2a;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  width: 100%;
+}
+#wave-foot {
+  width: 100%;
+  top: -35%;
+  position: absolute;
+  overflow: hidden;
+  fill:#ab2a2a;
+  width: 100%; 
+  height: 130px; 
+  transform: rotate(180deg);
+  position: -webkit-sticky;
+}
+#wave-foot svg {
+  width: 100%;
+  height: auto;
+}
+h5 {
+  font-weight: bold;
+  padding: 10px 30px;
+}
+p {
+  padding: 10px 30px;
+}
+
+.footer ul li a {
+  text-decoration: none;
+  padding: 10px 30px;
+}
+
+.footer ul li a:hover {
+  padding: 10px 30px;
+}
+.logo-footer  {
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  padding: 30px;
+  object-fit: cover;
+}
+.footer .social-icons a {
+  font-size: 24px;
+  margin: 15px;
+}
+
+#pdfblock{
+  width: 100%;
+  padding-top: 1000px;
+  width: 1000px;
+  height: 100px;
+}

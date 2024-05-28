@@ -1,0 +1,17 @@
+.menu .nav-item a.active {
+    background: var(--bs-primary) !important;
+}
+
+.menu .menu-item .border-bottom {
+    border-bottom-style: dashed !important;
+}
+.container {
+    background-color: rgb(220, 229, 231);
+}
+.accordion-body {
+    opacity: 1 !important;
+    visibility: visible !important;
+    display: block !important;
+    transition: none !important;
+    animation: none !important;
+  }
