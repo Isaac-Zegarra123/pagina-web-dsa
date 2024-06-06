@@ -16,8 +16,8 @@
             {{ session('success') }}
         </div>
     @endif
-    <div class="container mt-5">
-        <h2>Dashboard</h2>
+    <div class="contain mt-5">
+        <h2>Documentos</h2>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#miModal">
             Agregar
         </button>
@@ -40,7 +40,7 @@
         </div>
     </div>
 
-    <div class="container mt-5">
+    <div class="contain mt-5">
         <h2>Tabla de Documentos</h2>
         @if (session('success'))
             <div class="alert alert-success">
@@ -69,7 +69,6 @@
                         <td>
                             <div class="btn-group" role="group" aria-label="Basic example">
                                 <a href="{{ route('documentos.edit', $documento->id) }}" class="btn btn-warning btn-sm">Editar</a>
-                                <a href="#" class="btn btn-info btn-sm">Actualizar</a>
                                 <form action="{{ route('documentos.destroy', $documento->id) }}" method="POST" style="display:inline-block;">
                                     @csrf
                                     @method('DELETE')

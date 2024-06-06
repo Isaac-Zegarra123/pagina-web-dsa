@@ -24,7 +24,7 @@ class DocumentoController extends Controller
 
         // Convertir el PDF a imagen (opcional)
         $pdf = new Pdf(storage_path('app/public/' . $pdfPath));
-        $imageName = pathinfo($request->file('pdf')->getClientOriginalName(), PATHINFO_FILENAME) . '.jpg';
+        $imageName = pathinfo($pdfPath, PATHINFO_FILENAME) . '.jpg';
         $imagePath = 'pdf-images/' . $imageName;
         $pdf->saveImage(storage_path('app/public/' . $imagePath));
 
@@ -70,6 +70,11 @@ class DocumentoController extends Controller
         return redirect()->route('dashboard')->with('success', 'Documento actualizado exitosamente');
     }
 
+    
+
+
+
+
     public function destroy($id)
     {
         $documento = Documento::findOrFail($id);
@@ -84,4 +89,11 @@ class DocumentoController extends Controller
         $documentos = Documento::all();
         return view('dashboard', compact('documentos'));
     }
+
+    public function showAdmission()
+{
+    $documentos = Documento::all();
+    return view('welcome', compact('documentos'));
+}
+
 }

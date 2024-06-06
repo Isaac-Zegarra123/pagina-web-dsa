@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 
 Route::get('/document', function () {
-    return view('layouts.document.document');
+    return view('pages.document');
 })->name('document');
 
 Route::get('/statistics', function () {
@@ -30,12 +30,10 @@ Route::get('/statistics', function () {
 })->name('statistics');
 
 Route::get('/academic', function () {
-    return view('gallerypdf.academic');
+    return view('pages.academic');
 })->name('academic');
 
-Route::get('/carreras', function () {
-    return view('gallerypdf.carreras');
-})->name('carreras');
+
 
 Route::get('/graduantes', function () {
     return view('layouts.graduantes.graduantes');
@@ -46,6 +44,8 @@ Route::get('/calendar', function () {
 })->name('calendar');
 
 
+// En routes/web.php
+Route::get('/', [DocumentoController::class, 'showAdmission'])->name('home');
 
 
 Route::get('/dashboard', function () {

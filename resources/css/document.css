@@ -1,0 +1,82 @@
+.containe-galler {
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias líneas */
+    align-items: center;
+    padding: 70px;
+    background-color: #e8e8e8d6;
+  }
+  .containe-galler{
+    border-bottom: 200px;
+  }
+  .galler .galler-img {
+    position: relative;
+    overflow: hidden;
+    /*height: 220px;*/
+    width: 100%;
+  }
+  
+  
+  .galler .galler-img .hover-style {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 1s;
+  }
+  
+  .galler .galler-img:hover .hover-style {
+    width: auto;
+    height: auto;
+    border: 600px solid rgba(251, 251, 252, 0.3);
+    opacity: 1;
+  }
+  
+  .galler .galler-img embed {
+    transition: 0.5s;
+    /*height: 220px;
+    width: 100%;*/
+  }
+  
+  .galler .galler-img:hover embed {
+    transform: scale(1.3);
+  }
+  
+  .galler .galler-item .galler-overlay {
+    transition: 0.5s;
+  }
+  
+  .galler .galler-item:hover .galler-overlay {
+    background: transparent !important;
+    border: 0 !important;
+  }
+  
+  .galler .galler-img .search-icon {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .galler .galler-img:hover .search-icon {
+    opacity: 1;
+  }
+  /* Media queries para dispositivos móviles */
+  .galler .galler-img embed {
+    transition: 0.5s;
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    height: auto; /* Permite que la altura se ajuste automáticamente */
+  }
+  
+  .galler .galler-img:hover embed {
+    transform: scale(1.1); /* Ajusta la escala al hacer hover */
+  }
+  @media (max-width: 768px) {
+    .pdf-containe embed {
+        zoom: 2.5; /* Ajusta el nivel de zoom para dispositivos más pequeños */
+    }
+  }
+  

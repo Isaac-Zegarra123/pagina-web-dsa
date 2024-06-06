@@ -1,6 +1,6 @@
 <div class="sub-container">
     <div class="sub">
-        <h2 id="inicio">ACERCA DE</h2>
+        <h1 class="title" id="inicio">ACERCA DE</h1>
     </div>
 </div>
 <div class="container" style="text-align: justify;">
@@ -32,7 +32,7 @@
 </div>
 <div class="sub-container">
     <div class="sub">
-        <h2 id="inicio">Organigrama de la D.S.A</h2>
+        <h1 class="title" id="inicio">Organigrama de la D.S.A</h1>
     </div>
 </div>
 
